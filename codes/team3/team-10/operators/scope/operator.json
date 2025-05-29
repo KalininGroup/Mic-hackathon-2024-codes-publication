@@ -1,0 +1,24 @@
+{
+    "id": "12345228-0001-0001-0000-1234567890ab",
+    "image": "samwelborn/scope-operator:b57b1d",
+    "label": "Microscope Operator",
+    "description": "Operates an AFM",
+    "outputs": [
+        {
+            "name": "out",
+            "label": "The output",
+            "type": "frame",
+            "description": "Full frame"
+        }
+    ],
+    "parameters": [
+        {
+            "name": "data.h5",
+            "label": "Data file",
+            "type": "mount",
+            "default": "~/material1_perovksite/Image_10um_01.h5",
+            "description": "Raw data file to read in",
+            "required": true
+        }
+    ]
+}

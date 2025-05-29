@@ -1,0 +1,32 @@
+{
+    "id": "12345328-0001-0001-0000-1234567890ab",
+    "image": "samwelborn/image-segmenter:b57b1d",
+    "label": "Image segmenter",
+    "description": "Segments an image",
+    "inputs": [
+        {
+            "name": "in",
+            "label": "The input",
+            "type": "frame",
+            "description": "Full frame"
+        }
+    ],
+    "outputs": [
+        {
+            "name": "out",
+            "label": "The output",
+            "type": "frame",
+            "description": "Full frame"
+        }
+    ],
+    "parameters": [
+        {
+            "name": "normalize",
+            "label": "Normalize data?",
+            "type": "bool",
+            "default": "true",
+            "description": "This is where the raw data files (*.h5) are located",
+            "required": true
+        }
+    ]
+}

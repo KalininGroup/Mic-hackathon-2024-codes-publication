@@ -1,0 +1,12 @@
+.idea
+*__pycache__
+.ipynb_checkpoints/
+.vscode
+*runs
+*data
+*resources
+*trained_weights
+*models/ops/*
+
+.conda*
+*.out

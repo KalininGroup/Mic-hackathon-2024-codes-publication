@@ -1,0 +1,13 @@
+FROM samwelborn/operator:160835
+
+# --- Install DTMicroscope operators deps ---
+WORKDIR /DTMicroscope
+RUN touch README.md
+COPY operators/scope/poetry.lock* operators/scope/pyproject.toml ./
+RUN poetry install --no-root
+
+# --- Install team10_microscope ---
+COPY operators/scope/team10_microscope/ ./team10_microscope/
+RUN poetry install --only main
+
+COPY operators/scope-downstream/run.py /app/run.py

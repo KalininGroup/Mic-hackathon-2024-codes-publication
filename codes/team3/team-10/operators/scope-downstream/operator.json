@@ -1,0 +1,32 @@
+{
+    "id": "15345228-0001-0001-0000-1234567890ab",
+    "image": "samwelborn/scope-downstream:b57b1d",
+    "label": "Microscope Operator",
+    "description": "Operates an AFM",
+    "inputs": [
+        {
+            "name": "in",
+            "label": "The input",
+            "type": "list_of_coordinates",
+            "description": "Coordinate list"
+        }
+    ],
+    "outputs": [
+        {
+            "name": "out",
+            "label": "The output",
+            "type": "frame",
+            "description": "Full frame"
+        }
+    ],
+    "parameters": [
+        {
+            "name": "data.h5",
+            "label": "Data file",
+            "type": "mount",
+            "default": "~/material1_perovksite/Image_10um_01-copy.h5",
+            "description": "Raw data file to read in",
+            "required": true
+        }
+    ]
+}

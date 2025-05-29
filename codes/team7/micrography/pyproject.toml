@@ -1,0 +1,29 @@
+[project]
+name = "micrography"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "torch==2.4.1",
+    "torchaudio==2.4.1",
+    "torchvision==0.19.1",
+    "requests",
+    "scikit-image",
+    "scikit-learn",
+    "seaborn",
+    "marimo",
+    "tqdm",
+    "h5py",
+    "ipykernel",
+    "networkx",
+    "numba",
+    "pillow",
+    "polars",
+    "pyarrow",
+    "torch_geometric",
+    "datashader",
+    "colorcet",
+    "holoviews",
+    "scipy"
+]

@@ -1,0 +1,7 @@
+Python 3.8+
+Jupyter Notebook
+HuggingFace Transformers
+PyTorch
+Pandas
+NumPy
+OpenCV

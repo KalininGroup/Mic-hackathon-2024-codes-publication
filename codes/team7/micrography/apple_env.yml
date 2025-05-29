@@ -1,0 +1,32 @@
+name: micrography
+channels:
+  - conda-forge
+  - pyg
+  - pytorch
+dependencies:
+  - h5py
+  - ipykernel
+  - networkx
+  - numba
+  - pillow
+  - polars
+  - pyarrow
+  - pyg
+  - python=3.11
+  - pytorch==2.4.1
+  - requests
+  - scikit-image
+  - scikit-learn
+  - seaborn
+  - torchaudio==2.4.1
+  - torchvision==0.19.1
+  - tqdm
+  - datashader
+  - colorcet
+  - holoviews
+  - scipy
+  - mlx
+  - pip:
+    - marimo==0.10.2
+
+prefix: "/home/alexk101/.mambaforge/envs/micrography"

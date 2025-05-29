@@ -1,0 +1,72 @@
+{
+    "id": "12146328-0001-0001-0000-1234567890ab",
+    "image": "samwelborn/post-process:fcd581",
+    "label": "Mask post-processor",
+    "description": "Uses mask to find features of interest",
+    "inputs": [
+        {
+            "name": "in",
+            "label": "The input",
+            "type": "frame",
+            "description": "Full frame"
+        }
+    ],
+    "outputs": [
+        {
+            "name": "out",
+            "label": "The output",
+            "type": "list_of_coordinates",
+            "description": "Coordinate List"
+        }
+    ],
+    "parameters": [
+        {
+            "name": "num_bins",
+            "label": "Number of bins for grain size calculation",
+            "type": "int",
+            "default": 10,
+            "description": "Number of bins for grain size calculation",
+            "required": true
+        },
+        {
+            "name": "num_samples",
+            "label": "Number of samples for grain size calculation",
+            "type": "int",
+            "default": 10,
+            "description": "Number of samples for grain size calculation",
+            "required": true
+        },
+        {
+            "name": "setting",
+            "label": "Highest or lowest for grain size",
+            "type": "str-enum",
+            "default": "highest",
+            "description": "Method to use for background subtraction",
+            "options": [
+                "highest",
+                "lowest"
+            ],
+            "required": true
+        },
+        {
+            "name": "num_targets",
+            "label": "Number of targets for boundary area calculation",
+            "type": "int",
+            "default": 10,
+            "description": "Number of targets for boundary area calculation",
+            "required": true
+        },
+        {
+            "name": "mask_function",
+            "label": "Mask operation",
+            "type": "str-enum",
+            "default": "grain_size",
+            "description": "Mask operation to perform",
+            "options": [
+                "grain_size",
+                "grain_boundaries"
+            ],
+            "required": true
+        }
+    ]
+}

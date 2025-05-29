@@ -1,0 +1,4 @@
+segmentor/images_repo/
+segmentor/masks_repo/
+evaluation/*/
+.idea/

@@ -1,0 +1,15 @@
+FROM --platform=linux/arm64 samwelborn/operator:160835
+
+RUN apt-get update && apt-get install -y \
+    git && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN pip install numpy git+https://github.com/vanvalenlab/cellSAM.git
+
+# Download weights ahead of time...
+# This image will be big!
+COPY ./operators/segmentation/warmup.py ./operators/segmentation/yeaz.npy /app/
+
+RUN python /app/warmup.py
+
+COPY ./operators/segmentation/run.py /app/run.py

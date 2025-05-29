@@ -1,0 +1,5 @@
+numpy
+mdanalysis
+matplotlib
+scipy
+pydmd

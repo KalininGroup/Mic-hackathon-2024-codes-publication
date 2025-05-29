@@ -1,0 +1,55 @@
+{
+    "id": "12345228-0001-0001-0000-1234567890ab",
+    "image": "samwelborn/array-image-converter:4b121d",
+    "label": "Numpy Image Converter",
+    "description": "Converts a numpy array to an image",
+    "inputs": [
+        {
+            "name": "in",
+            "label": "The input",
+            "type": "frame",
+            "description": "Full frame"
+        }
+    ],
+    "outputs": [
+        {
+            "name": "out",
+            "label": "The output",
+            "type": "frame",
+            "description": "Full frame"
+        }
+    ],
+    "parameters": [
+        {
+            "name": "contrast",
+            "label": "Image contrast",
+            "type": "float",
+            "default": "2.0",
+            "description": "Image contrast",
+            "required": true
+        },
+        {
+            "name": "brightness",
+            "label": "Image brightness",
+            "type": "float",
+            "default": "1.0",
+            "description": "Image brightness",
+            "required": true
+        },
+        {
+            "name": "colormap",
+            "label": "Colormap",
+            "type": "str-enum",
+            "default": "viridis",
+            "description": "Colormap to use",
+            "required": true,
+            "options": [
+                "viridis",
+                "plasma",
+                "inferno",
+                "magma",
+                "cividis"
+            ]
+        }
+    ]
+}

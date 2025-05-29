@@ -1,0 +1,4 @@
+FROM samwelborn/operator:160835
+
+RUN pip install numpy scipy
+COPY ./operators/post-process/run.py /app/run.py

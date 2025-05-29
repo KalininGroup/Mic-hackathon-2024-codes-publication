@@ -1,0 +1,5 @@
+FROM samwelborn/operator:160835
+
+RUN pip install numpy pillow matplotlib
+
+COPY ./operators/image_converter/run.py /app/run.py

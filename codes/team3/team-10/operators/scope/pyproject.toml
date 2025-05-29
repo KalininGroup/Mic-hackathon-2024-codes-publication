@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "team10-microscope"
+version = "0.1.0"
+description = ""
+authors = ["Sam Welborn <swelborn@lbl.gov>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyro5 = "^5.15"
+scifireaders = "^0.11.6"
+sidpy = "^0.12.3"
+pynsid = "^0.0.7.2"
+dtmicroscope = { git = "https://github.com/swelborn/DTMicroscope.git", branch = "remove-unused" }
+igor2 = "^0.5.9"
+gwyfile = "^0.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+exclude = ["**/__init__.py"]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501", # line too long, handled by black
+    "B008", # do not perform function calls in argument defaults
+    "W191", # indentation contains tabs
+    "B904", # Allow raising exceptions without from e, for HTTPException
+]
+
+isort = { known-first-party = ['operators', 'core'] }
